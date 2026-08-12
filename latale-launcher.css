@@ -358,6 +358,8 @@ a:hover {
     left: 32px;
     bottom: 36px;
     width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -637,4 +639,17 @@ a:hover {
 }
 #banner .la-container .la-right .la-right-bt .la-new-cont .news-ul li a:hover {
     color: #fedb17;
+}
+#banner .la-container .la-right .la-right-bt .la-new-cont .news-ul li .news-tag {
+    display: inline-block;
+    min-width: 76px;
+    margin-right: 8px;
+    padding: 0 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 9px;
+    color: #cccccc;
+    font-size: 11px;
+    line-height: 17px;
+    text-align: center;
+    vertical-align: 1px;
 }
