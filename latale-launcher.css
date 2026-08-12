@@ -288,6 +288,33 @@ a:hover {
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
+/* 배경 상단 어둡게 / 하단 점진 블러 오버레이 */
+#banner .la-launcher:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+#banner .la-launcher:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35));
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000000 75%);
+    mask-image: linear-gradient(to bottom, transparent, #000000 75%);
+    z-index: 1;
+    pointer-events: none;
+}
 /* launcher header : 28px black bar + logo */
 #banner .la-header {
     position: absolute;
@@ -357,6 +384,7 @@ a:hover {
     position: absolute;
     left: 32px;
     bottom: 36px;
+    z-index: 2;
     width: 360px;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
