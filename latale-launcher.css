@@ -592,11 +592,14 @@ a:hover {
 #banner .la-container .la-right .la-right-bt .la-new-cont .title {
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 16px;
+    line-height: 16px;
     padding-top: 5px;
-    padding-bottom: 8px;
-    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     font-weight: 700;
 }
 /* line 320, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
@@ -616,8 +619,8 @@ a:hover {
     flex-direction: column;
     color: #cccccc;
     font-family: 'Nunito', sans-serif;
-    font-size: 13px;
-    line-height: 26px;
+    font-size: 15px;
+    line-height: 29px;
     list-style: none;
     font-weight: 400;
 }
