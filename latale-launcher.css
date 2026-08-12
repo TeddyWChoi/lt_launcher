@@ -308,8 +308,8 @@ a:hover {
     bottom: 0;
     height: 200px;
     background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.35));
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     -webkit-mask-image: linear-gradient(to bottom, transparent, #000000 75%);
     mask-image: linear-gradient(to bottom, transparent, #000000 75%);
     z-index: 1;
