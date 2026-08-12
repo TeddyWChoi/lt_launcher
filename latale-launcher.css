@@ -277,7 +277,7 @@ a:hover {
 }
 /* launcher fixed area : 1366 x 768 */
 #banner .la-launcher {
-    background-image: url('https://cdn.papayaplay.com/SF/1781/7509/4039/lt-slider2.png');
+    background-color: #252525;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
