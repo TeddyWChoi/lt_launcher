@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://papayacdn.s3.amazonaws.com/static/assets/styles/latale-launcher.css?1"
     /> -->
-    <link rel="stylesheet" href="./latale-launcher.css?10" />
+    <link rel="stylesheet" href="./latale-launcher.css?11" />
     <!--https://papayacdn.s3.amazonaws.com/static/assets/styles/-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -322,19 +322,12 @@
                         var code = data.ResultCode[0].Code;
 
                         if (code == '10000') {
-                            // NotificationType 태그 매핑 (portal.do?tp=messages 와 동일)
-                            var typeLabels = { 1: 'Maintenance', 2: 'General', 3: 'Emergency' };
-
                             $.each(data.NotificationList, function (index, val) {
                                 var url =
                                     'http://www.papayaplay.com/portal.do?tp=messages&amp;sid=4&amp;dataid=' +
                                     val.NotificationID;
-                                var tag = typeLabels[val.NotificationType] || 'Notice';
                                 $('.news-ul').append(
-                                    '<li><a href="' + url + '" target="_blank">' +
-                                    '<span class="news-tag">' + tag + '</span>' +
-                                    val.Title +
-                                    '</a></li>'
+                                    '<li><a href="' + url + '" target="_blank">' + val.Title + '</a></li>'
                                 );
                             });
                         } else {
