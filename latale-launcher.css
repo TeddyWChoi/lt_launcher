@@ -1,0 +1,637 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:100,200,300,400,600,700,800|El+Messiri:100,200,300,600);
+/* line 1, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 23, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+/* line 28, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+body {
+    line-height: 1;
+}
+
+/* line 32, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+ol,
+ul {
+    list-style: none;
+}
+
+/* line 36, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+blockquote,
+q {
+    quotes: none;
+}
+
+/* line 40, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/* line 46, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'La Tale Official';
+    src: url('https://papayacdn.s3.amazonaws.com/static/assets/styles/fonts/La-Tale-Official.eot');
+    src: url('https://papayacdn.s3.amazonaws.com/static/assets/styles/fonts/La-Tale-Official.eot?#iefix')
+            format('embedded-opentype'),
+        url('https://papayacdn.s3.amazonaws.com/static/assets/styles/fonts/La-Tale-Official.woff') format('woff'),
+        url('https://papayacdn.s3.amazonaws.com/static/assets/styles/fonts/La-Tale-Official.ttf') format('truetype'),
+        url('https://papayacdn.s3.amazonaws.com/static/assets/styles/fonts/La-Tale-Official.svg#La-Tale-Official')
+            format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* line 68, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+[class*='la-icon-']:before {
+    display: inline-block;
+    font-family: 'La Tale Official';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 78, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-chevron-r:before {
+    content: '\0041';
+}
+
+/* line 82, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-chevron-l:before {
+    content: '\0042';
+}
+
+/* line 86, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-arrowb:before {
+    content: '\0043';
+}
+
+/* line 90, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-arrow1:before {
+    content: '\0044';
+}
+
+/* line 94, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-download-now:before {
+    content: '\0045';
+}
+
+/* line 98, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.la-icon-mouse-down:before {
+    content: '\0046';
+}
+
+/* line 102, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-prev,
+#banner .la-container .la-left .sl-cont .slick-next {
+    font-size: 0;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* line 110, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+.loader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 3000;
+    margin: auto;
+    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+    border-left: 1.1em solid #ffffff;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
+}
+
+/* line 128, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-top,
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-top {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 11px;
+    text-transform: uppercase;
+}
+
+/* line 138, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-bt .title,
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-bt .title {
+    color: #ffffff;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+/* line 146, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-bt .date,
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-bt .date {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 100;
+}
+
+/* line 154, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+a {
+    text-decoration: none;
+    color: white;
+}
+/* line 157, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+a:hover {
+    color: #fedb17;
+}
+
+/* line 162, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner {
+    background-color: #252525;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+/* launcher fixed area : 1366 x 768 */
+#banner .la-launcher {
+    background-image: url('https://cdn.papayaplay.com/SF/1781/7509/4039/lt-slider2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    overflow: hidden;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+/* launcher header : 28px black bar + logo */
+#banner .la-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 28px;
+    background-color: #000000;
+    padding: 0 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#banner .la-header .la-logo img {
+    width: 38px;
+    height: 21px;
+    display: block;
+}
+/* home, sns icons */
+#banner .la-sns {
+    position: absolute;
+    top: 44px;
+    right: 24px;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#banner .la-sns .sns-icon {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+#banner .la-sns .sns-icon:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#banner .la-sns .sns-icon img {
+    width: 18px;
+    height: 18px;
+}
+#banner .la-sns .sns-icon .home-icon {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
+/* line 167, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container {
+    position: absolute;
+    left: 32px;
+    bottom: 36px;
+    width: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* line 173, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left {
+    position: relative;
+}
+#banner .la-container .la-left .sl-cont {
+    width: 360px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+#banner .la-container .la-left .sl-pager {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 2;
+    padding: 5px 8px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#banner .la-container .la-left .sl-pager .pager-prev,
+#banner .la-container .la-left .sl-pager .pager-next {
+    font-size: 0;
+    line-height: 0;
+    padding: 0 4px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#banner .la-container .la-left .sl-pager .pager-prev:hover,
+#banner .la-container .la-left .sl-pager .pager-next:hover {
+    color: #fedb17;
+}
+#banner .la-container .la-left .sl-pager .pager-prev:before,
+#banner .la-container .la-left .sl-pager .pager-next:before {
+    font-size: 9px;
+}
+#banner .la-container .la-left .sl-pager .pager-count {
+    padding: 0 4px;
+    letter-spacing: 1px;
+}
+/* line 176, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item {
+    background-size: cover;
+    background-position: center;
+}
+/* line 179, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a {
+    height: 274px;
+    width: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* line 186, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-top {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+/* line 193, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-bt {
+    width: 360px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 197, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-bt .title {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* line 207, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .sl-item a .con-bt .date {
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+/* line 217, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-prev {
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    z-index: 2;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.7);
+}
+/* line 225, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-prev:hover {
+    color: #fedb17;
+}
+/* line 228, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-prev:before {
+    font-family: 'La Tale Official';
+    content: '\0044';
+    font-size: 30px;
+    transition: all 0.5s;
+}
+/* line 236, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-next {
+    position: absolute;
+    right: 2%;
+    top: 40%;
+    z-index: 2;
+    height: 100px;
+    color: rgba(255, 255, 255, 0.7);
+}
+/* line 244, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-next:hover {
+    color: #fedb17;
+}
+/* line 247, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-left .sl-cont .slick-next:before {
+    font-family: 'La Tale Official';
+    content: '\0043';
+    font-size: 30px;
+    transition: all 0.5s;
+}
+/* line 256, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right {
+    width: 360px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* line 261, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont {
+    width: 300px;
+    border: 1px solid #373737;
+}
+/* line 264, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item {
+    background-size: cover;
+    background-position: center;
+}
+/* line 268, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a {
+    height: 228px;
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+/* line 275, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-top {
+    padding: 10px;
+    width: 218px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 20%, transparent);
+}
+/* line 281, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-bt {
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* line 284, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-bt .title {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* line 295, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-top .last-cont .sl-item a .con-bt .date {
+    padding-top: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+/* line 308, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-bt .la-new-cont {
+    padding: 14px 10px 18px;
+    background-color: rgba(20, 20, 20, 0.75);
+    border-radius: 0 0 12px 12px;
+}
+/* line 310, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-bt .la-new-cont .title {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    font-weight: 700;
+}
+/* line 320, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-bt .la-new-cont .news-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #cccccc;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    line-height: 26px;
+    list-style: none;
+    font-weight: 400;
+}
+/* line 332, Users/pangjaehoon/Documents/Vertigo-workspace/Launchers/launcher/latale/sass/latale-launcher.scss */
+#banner .la-container .la-right .la-right-bt .la-new-cont .news-ul li {
+    padding-left: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#banner .la-container .la-right .la-right-bt .la-new-cont .news-ul li a {
+    color: #cccccc;
+}
+#banner .la-container .la-right .la-right-bt .la-new-cont .news-ul li a:hover {
+    color: #fedb17;
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Latale - The Call of The Godess</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://papayacdn.s3.amazonaws.com/static/assets/styles/latale-launcher.css?1"
+    /> -->
+    <link rel="stylesheet" href="./latale-launcher.css?7" />
+    <!--https://papayacdn.s3.amazonaws.com/static/assets/styles/-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <!-- Google tag (gtag.js) – 파파야 전체 사이트 공통 태그-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F7RRMGCSB1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F7RRMGCSB1');
+    </script>
+
+    <!-- Google Tag Manager – 개별 테그 라테일-->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5D5G28H');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body id="banner" oncontextmenu="return false">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D5G28H" height="0" width="0"
+            style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="la-launcher">
+        <!-- launcher header : 28px black bar + logo -->
+        <div class="la-header">
+            <a href="https://latale.papayaplay.com/latale.do" target="_blank" class="la-logo"
+                title="LaTale Official Site">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/lt_logo.png"
+                    alt="LaTale" />
+            </a>
+        </div>
+
+        <!-- home, sns icons -->
+        <div class="la-sns">
+            <a href="https://latale.papayaplay.com/latale.do" title="Home" target="_blank"
+                class="sns-icon home-icon-wrapper">
+                <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 3.2 2.8 11h2.7v9.3h5V14h3v6.3h5V11h2.7L12 3.2z" />
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/latalena/" title="Facebook" target="_blank"
+                class="sns-icon fb-icon-wrapper">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/icon_fb.png"
+                    class="fb-icon" />
+            </a>
+            <a href="https://www.instagram.com/lataleofficial/" title="Instagram" target="_blank"
+                class="sns-icon insta-icon-wrapper">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/icon_insta.png"
+                    class="insta-icon" />
+            </a>
+            <a href="https://www.youtube.com/user/lataletube" title="Youtube" target="_blank"
+                class="sns-icon yt-icon-wrapper">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/icon_yt.png"
+                    class="yt-icon" />
+            </a>
+            <a href="https://www.twitter.com/papaya_latale" title="Twitter" target="_blank"
+                class="sns-icon twitter-icon-wrapper">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/icon_twitter.png"
+                    class="twitter-icon" />
+            </a>
+            <a href="https://discord.com/invite/latalena" title="Discord" target="_blank"
+                class="sns-icon discord-icon-wrapper">
+                <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/icon_discord.png"
+                    class="discord-icon" />
+            </a>
+        </div>
+
+        <div class="la-container">
+            <div class="la-left">
+                <div class="sl-cont"></div>
+                <div class="sl-pager">
+                    <button type="button" class="pager-prev la-icon-chevron-l"></button>
+                    <span class="pager-count"></span>
+                    <button type="button" class="pager-next la-icon-chevron-r"></button>
+                </div>
+            </div>
+            <div class="la-right">
+                <!-- 리스트 상단 배너 영역 : 개편 레이아웃에서 미사용, 임시 숨김처리
+                <div class="la-right-top">
+                    <div class="last-cont"></div>
+                </div>
+                -->
+                <div class="la-right-bt">
+                    <div class="la-new-cont">
+                        <h1 class="title">Latest News & Updates</h1>
+                        <ul class="news-ul"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+    <script>
+        //11
+        $(document).ready(function () {
+            var querystring = location.search;
+            console.log(querystring);
+
+            if (querystring === '?lang=en') {
+                getHomeBanner('en');
+                getBanners('en');
+                getNotification('en');
+                // getLastNews('en'); // 리스트 상단 배너 미사용으로 임시 비활성화
+            } else if (querystring === '?lang=de') {
+                getHomeBanner('de');
+                getBanners('de');
+                getNotification('de');
+                // getLastNews('en'); // 리스트 상단 배너 미사용으로 임시 비활성화
+            } else if (querystring === '?lang=fr') {
+                getHomeBanner('fr');
+                getBanners('fr');
+                getNotification('fr');
+                // getLastNews('en'); // 리스트 상단 배너 미사용으로 임시 비활성화
+            } else if (querystring === '?lang=pt') {
+                getHomeBanner('pt');
+                getBanners('pt');
+                getNotification('pt');
+                // getLastNews('en'); // 리스트 상단 배너 미사용으로 임시 비활성화
+            } else {
+                getHomeBanner('en');
+                getBanners('en');
+                getNotification('en');
+                // getLastNews('en'); // 리스트 상단 배너 미사용으로 임시 비활성화
+            }
+
+            function getHomeBanner(lang) {
+                $.ajax({
+                    url: 'https://io.papayaplay.com/json.do?callback=?',
+                    type: 'GET',
+                    data: {
+                        cm: 'Service.Board.GetBanner',
+                        groupid: 4,
+                        language: lang,
+                    },
+                    crossDomain: true,
+                    dataType: 'json',
+                })
+                    .done(function (data) {
+                        var code = data.ResultCode[0].Code;
+                        console.log(data);
+
+                        if (code == '10000') {
+                            if (data.BannerList && data.BannerList.length > 0) {
+                                $('.la-launcher').css(
+                                    'background-image',
+                                    'url(' + data.BannerList[0].ImgUrl1 + ')'
+                                );
+                            }
+                        } else {
+                            //alert("Error Code: " + code);
+                        }
+                    })
+                    .fail(function () {
+                        console.log('error');
+                    })
+                    .always(function () {
+                        console.log('complete');
+                    });
+            }
+
+            function getBanners(lang) {
+                $.ajax({
+                    url: 'https://io.papayaplay.com/json.do?callback=?',
+                    type: 'GET',
+                    data: {
+                        cm: 'Service.Board.GetBanner',
+                        groupid: 10,
+                        language: lang,
+                    },
+                    crossDomain: true,
+                    dataType: 'json',
+                })
+                    .done(function (data) {
+                        var code = data.ResultCode[0].Code;
+                        console.log(data);
+                        if (code == '10000') {
+                            $.each(data.BannerList, function (index, item) {
+                                item.ReleaseDate = moment(item.ReleaseDate).format('MMM Do, YYYY');
+                                $('.sl-cont').append(
+                                    '<div class="sl-item" style="background-image: url(' +
+                                    item.ImgUrl1 +
+                                    ')">' +
+                                    '<a href="' +
+                                    item.TargetUrl1 +
+                                    '" target="_blank">' +
+                                    '<div class="con-top"></div>' +
+                                    '<div class="con-bt"></div>' +
+                                    '</a>' +
+                                    '</div>'
+                                );
+                            });
+
+                            $('.sl-cont').on('init afterChange', function (event, slick, currentSlide) {
+                                var current = (currentSlide || 0) + 1;
+                                $('.sl-pager .pager-count').text(current + ' / ' + slick.slideCount);
+                            });
+
+                            $('.sl-cont').slick({
+                                infinite: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                autoplay: true,
+                                arrows: false,
+                            });
+
+                            $('.sl-pager .pager-prev').on('click', function () {
+                                $('.sl-cont').slick('slickPrev');
+                            });
+
+                            $('.sl-pager .pager-next').on('click', function () {
+                                $('.sl-cont').slick('slickNext');
+                            });
+                        } else {
+                            //alert("Error Code: " + code);
+                        }
+                    })
+                    .fail(function () {
+                        console.log('error');
+                    })
+                    .always(function () {
+                        console.log('complete');
+                    });
+            }
+
+            function getLastNews(lang) {
+                $.ajax({
+                    url: 'https://io.papayaplay.com/json.do?callback=?',
+                    type: 'GET',
+                    data: {
+                        cm: 'Service.Board.GetBanner',
+                        groupid: 11,
+                        language: lang,
+                    },
+                    crossDomain: true,
+                    dataType: 'json',
+                })
+                    .done(function (data) {
+                        var code = data.ResultCode[0].Code;
+                        console.log(data);
+
+                        if (code == '10000') {
+                            $.each(data.BannerList, function (index, item) {
+                                item.ReleaseDate = moment(item.ReleaseDate).format('MMM Do, YYYY');
+                                $('.last-cont').append(
+                                    '<div class="sl-item" style="background-image: url(' +
+                                    item.ImgUrl1 +
+                                    ')">' +
+                                    '<a href="' +
+                                    item.TargetUrl1 +
+                                    '" target="_blank">' +
+                                    '<div class="con-top"></div>' +
+                                    '<div class="con-bt"></div>' +
+                                    '</a>' +
+                                    '</div>'
+                                );
+                            });
+                        } else {
+                            //alert("Error Code: " + code);
+                        }
+                    })
+                    .fail(function () {
+                        console.log('error');
+                    })
+                    .always(function () {
+                        console.log('complete');
+                    });
+            }
+
+            function getNotification(lang) {
+                $.ajax({
+                    url: 'https://io.papayaplay.com/json.do?callback=?',
+                    type: 'GET',
+                    data: {
+                        cm: 'Account.User.GetPublicNotificationRecent',
+                        serviceid1: 4,
+                        serviceid2: 4,
+                        language: lang,
+                        itemcount: 5,
+                    },
+                    crossDomain: true,
+                    dataType: 'json',
+                })
+                    .done(function (data) {
+                        console.log(data);
+                        var code = data.ResultCode[0].Code;
+
+                        if (code == '10000') {
+                            $.each(data.NotificationList, function (index, val) {
+                                var url =
+                                    'http://www.papayaplay.com/portal.do?tp=messages&amp;sid=4&amp;dataid=' +
+                                    val.NotificationID;
+                                $('.news-ul').append(
+                                    '<li><a href="' + url + '" target="_blank">' + val.Title + '</a></li>'
+                                );
+                            });
+                        } else {
+                            //alert("Error Code: " + code);
+                        }
+                    })
+                    .fail(function () {
+                        console.log('error');
+                    });
+            }
+        });
+    </script>
+</body>
+
+</html>
