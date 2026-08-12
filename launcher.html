@@ -167,7 +167,7 @@
                     type: 'GET',
                     data: {
                         cm: 'Service.Board.GetBanner',
-                        groupid: 4,
+                        groupid: 25,
                         language: lang,
                     },
                     crossDomain: true,
@@ -179,10 +179,9 @@
 
                         if (code == '10000') {
                             if (data.BannerList && data.BannerList.length > 0) {
-                                $('.la-launcher').css(
-                                    'background-image',
-                                    'url(' + data.BannerList[0].ImgUrl1 + ')'
-                                );
+                                // 업데이트 배너가 오래된 순으로 쌓여있어 마지막 항목이 최신
+                                var lastBanner = data.BannerList[data.BannerList.length - 1];
+                                $('.la-launcher').css('background-image', 'url(' + lastBanner.ImgUrl1 + ')');
                             }
                         } else {
                             //alert("Error Code: " + code);
