@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://papayacdn.s3.amazonaws.com/static/assets/styles/latale-launcher.css?1"
     /> -->
-    <link rel="stylesheet" href="./latale-launcher_v2.css?2" />
+    <link rel="stylesheet" href="./latale-launcher_v2.css?3" />
     <!--https://papayacdn.s3.amazonaws.com/static/assets/styles/-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -150,6 +150,51 @@
                 <span class="start-label">Game Start<img src="./images/icon_play.png" class="label-icon" alt="" /></span>
                 <span class="start-hover"><img src="./images/icon_pause.png" alt="" /></span>
             </button>
+        </div>
+
+        <!-- settings layer popup -->
+        <div class="la-settings">
+            <div class="settings-popup">
+                <button type="button" class="settings-close" title="Close">
+                    <img src="./images/icon_win_close.png" alt="Close" />
+                </button>
+                <h1 class="settings-title">Settings</h1>
+                <ul class="settings-ul">
+                    <li>
+                        <span class="set-label">Run launcher on computer startup</span>
+                        <button type="button" class="set-toggle is-on">
+                            <span class="toggle-txt">ON</span>
+                            <span class="toggle-knob"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <span class="set-label">Auto update &amp; auto launch game</span>
+                        <button type="button" class="set-toggle">
+                            <span class="toggle-txt">OFF</span>
+                            <span class="toggle-knob"></span>
+                        </button>
+                    </li>
+                </ul>
+                <h1 class="settings-title">Policies</h1>
+                <ul class="settings-ul">
+                    <li>
+                        <span class="set-label">Terms of Service</span>
+                        <a href="#" class="policy-btn">View</a>
+                    </li>
+                    <li>
+                        <span class="set-label">Privacy Policy</span>
+                        <a href="#" class="policy-btn">View</a>
+                    </li>
+                    <li>
+                        <span class="set-label">Game Rating</span>
+                        <a href="#" class="policy-btn">View</a>
+                    </li>
+                    <li>
+                        <span class="set-label">Game Operation Policy</span>
+                        <a href="#" class="policy-btn">View</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -366,9 +411,30 @@
                     });
             }
 
-            // 상단 새로고침 버튼 (설정/최소화/닫기는 런처 쉘에서 처리)
+            // 상단 새로고침 버튼 (최소화/닫기는 런처 쉘에서 처리)
             $('.win-refresh').on('click', function () {
                 location.reload();
+            });
+
+            // 설정 레이어 팝업
+            $('.win-settings').on('click', function () {
+                $('.la-settings').fadeIn(200);
+            });
+
+            $('.la-settings .settings-close').on('click', function () {
+                $('.la-settings').fadeOut(200);
+            });
+
+            $('.la-settings').on('click', function (e) {
+                // 팝업 바깥(딤 영역) 클릭 시 닫기
+                if (e.target === this) {
+                    $(this).fadeOut(200);
+                }
+            });
+
+            $('.set-toggle').on('click', function () {
+                var isOn = $(this).toggleClass('is-on').hasClass('is-on');
+                $(this).find('.toggle-txt').text(isOn ? 'ON' : 'OFF');
             });
 
             // 게임 시작 버튼 : 업데이트 > 다운로드 > 설치 진행 데모

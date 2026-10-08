@@ -826,3 +826,136 @@ a:hover {
         transform: rotate(360deg);
     }
 }
+
+/* settings layer popup */
+#banner .la-settings {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+#banner .la-settings .settings-popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 445px;
+    padding: 28px 32px 36px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #3d3d3d;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+#banner .la-settings .settings-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    line-height: 0;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+#banner .la-settings .settings-close:hover {
+    opacity: 1;
+}
+#banner .la-settings .settings-close img {
+    height: 12px;
+    width: auto;
+    display: block;
+}
+#banner .la-settings .settings-title {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 14px 0 12px;
+}
+#banner .la-settings .settings-ul {
+    list-style: none;
+}
+#banner .la-settings .settings-ul li {
+    height: 50px;
+    margin-bottom: 1px;
+    padding: 0 16px;
+    background-color: #2d2d2d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#banner .la-settings .settings-ul .set-label {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+#banner .la-settings .settings-ul .set-toggle {
+    position: relative;
+    width: 68px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: #0a0a0a;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+#banner .la-settings .settings-ul .set-toggle.is-on {
+    background: linear-gradient(90deg, #fa18c7, #ff6bbf);
+}
+#banner .la-settings .settings-ul .set-toggle .toggle-knob {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: left 0.25s;
+}
+#banner .la-settings .settings-ul .set-toggle.is-on .toggle-knob {
+    left: 41px;
+}
+#banner .la-settings .settings-ul .set-toggle .toggle-txt {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 30px;
+}
+#banner .la-settings .settings-ul .set-toggle.is-on .toggle-txt {
+    right: auto;
+    left: 11px;
+}
+#banner .la-settings .settings-ul .policy-btn {
+    padding: 7px 16px;
+    background-color: #080808;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+#banner .la-settings .settings-ul .policy-btn:hover {
+    background-color: #ffffff;
+    color: #080808;
+}
