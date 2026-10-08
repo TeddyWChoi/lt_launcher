@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://papayacdn.s3.amazonaws.com/static/assets/styles/latale-launcher.css?1"
     /> -->
-    <link rel="stylesheet" href="./latale-launcher_v2.css?1" />
+    <link rel="stylesheet" href="./latale-launcher_v2.css?2" />
     <!--https://papayacdn.s3.amazonaws.com/static/assets/styles/-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -57,13 +57,27 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="la-launcher">
-        <!-- launcher header : 28px black bar + logo -->
+        <!-- launcher header : 28px black bar + logo / window controls -->
         <div class="la-header">
             <a href="https://latale.papayaplay.com/latale.do" target="_blank" class="la-logo"
                 title="LaTale Official Site">
                 <img src="https://static.papayaplay.com/static/assets/images/latale/renewal/common/lt_logo.png"
                     alt="LaTale" />
             </a>
+            <div class="la-win-controls">
+                <button type="button" class="win-btn win-refresh" title="Refresh">
+                    <img src="./images/icon_win_refresh.png" alt="Refresh" />
+                </button>
+                <button type="button" class="win-btn win-settings" title="Settings">
+                    <img src="./images/icon_win_settings.png" alt="Settings" />
+                </button>
+                <button type="button" class="win-btn win-min" title="Minimize">
+                    <img src="./images/icon_win_min.png" alt="Minimize" />
+                </button>
+                <button type="button" class="win-btn win-close" title="Close">
+                    <img src="./images/icon_win_close.png" alt="Close" />
+                </button>
+            </div>
         </div>
 
         <!-- home, sns icons -->
@@ -123,6 +137,19 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- game start / update progress -->
+        <div class="la-start">
+            <div class="la-version">
+                <p class="version-num">Version 353.1291</p>
+                <p class="version-txt">You're up to date.</p>
+            </div>
+            <button type="button" class="start-btn is-idle">
+                <span class="start-fill"></span>
+                <span class="start-label">Game Start<img src="./images/icon_play.png" class="label-icon" alt="" /></span>
+                <span class="start-hover"><img src="./images/icon_pause.png" alt="" /></span>
+            </button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -337,6 +364,82 @@
                     .fail(function () {
                         console.log('error');
                     });
+            }
+
+            // 상단 새로고침 버튼 (설정/최소화/닫기는 런처 쉘에서 처리)
+            $('.win-refresh').on('click', function () {
+                location.reload();
+            });
+
+            // 게임 시작 버튼 : 업데이트 > 다운로드 > 설치 진행 데모
+            var startBtn = $('.start-btn');
+            var startLabel = $('.start-label');
+            var startFill = $('.start-fill');
+            var hoverIcon = $('.start-hover img');
+            var progTimer = null;
+            var progPhase = ''; // 'update' | 'install'
+            var progValue = 0;
+            var progPaused = false;
+
+            startBtn.on('click', function () {
+                if (startBtn.hasClass('is-idle')) {
+                    startUpdate();
+                } else if (startBtn.hasClass('is-progress')) {
+                    togglePause();
+                }
+            });
+
+            function startUpdate() {
+                startBtn.removeClass('is-idle').addClass('is-update');
+                startLabel.html('Update<img src="./images/icon_refresh.png" class="label-icon spin" alt="" />');
+
+                // 업데이트 확인 후 다운로드 시작
+                setTimeout(function () {
+                    progPhase = 'update';
+                    progValue = 0;
+                    progPaused = false;
+                    hoverIcon.attr('src', './images/icon_pause.png');
+                    startBtn.removeClass('is-update').addClass('is-progress');
+                    renderProgress();
+
+                    progTimer = setInterval(function () {
+                        if (progPaused) return;
+
+                        progValue += Math.random() * 2.4 + 0.4;
+                        if (progValue >= 100) {
+                            if (progPhase === 'update') {
+                                // 다운로드 완료 > 설치 진행
+                                progPhase = 'install';
+                                progValue = 0;
+                            } else {
+                                clearInterval(progTimer);
+                                finishUpdate();
+                                return;
+                            }
+                        }
+                        renderProgress();
+                    }, 120);
+                }, 1500);
+            }
+
+            function renderProgress() {
+                var label = progPaused ? 'Paused' : progPhase === 'update' ? 'Updating' : 'Installing';
+                startFill.css('width', progValue + '%');
+                startLabel.text(label + ' ' + Math.floor(progValue) + '%');
+            }
+
+            function togglePause() {
+                progPaused = !progPaused;
+                startBtn.toggleClass('is-paused', progPaused);
+                hoverIcon.attr('src', progPaused ? './images/icon_play.png' : './images/icon_pause.png');
+                renderProgress();
+            }
+
+            function finishUpdate() {
+                startBtn.removeClass('is-progress is-paused').addClass('is-idle');
+                startFill.css('width', 0);
+                startLabel.html('Game Start<img src="./images/icon_play.png" class="label-icon" alt="" />');
+                $('.la-version .version-txt').text("You're up to date.");
             }
         });
     </script>
